@@ -50,32 +50,6 @@ const Pricing = () => {
 
         <PricingSwitch onChange={handleSwitchChange} />
 
-<<<<<<< HEAD
-        <div>
-          <div>
-            <span>Standard</span>
-            <b>{price}</b> /mo
-            <ul>
-              {list.map((el, index) => {
-                return <li key={index}>{el}</li>;
-              })}
-            </ul>
-            <Button>Get it now</Button>
-          </div>
-          <div>
-            <span>Entreprise</span>
-            <p>
-              We offer variable pricing with discounts for larger organizations.
-              Get in touch with us and we’ll figure out something that works for
-              everyone.
-            </p>
-            <Button>Contact us</Button>
-          </div>
-        </div>
-      </Container>
-    </Box>
-  );
-=======
         <Box d={["block", null, "flex"]} alignItems="center">
           <Box bg="white" shadow="lg" flex="1" zIndex="1" mb={[6, 6, 0]}>
             <Center pt="6">
@@ -129,7 +103,6 @@ const Pricing = () => {
       </Container>
     </Box>
   )
->>>>>>> 554f3ab5353fa61df56ee547463cebac83eb6650
 }
 
 export default Pricing
