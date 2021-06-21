@@ -1,7 +1,7 @@
-import { Container, Text } from "@chakra-ui/layout"
-import { Button, Center, useDisclosure } from "@chakra-ui/react"
+
+import { Button, Center, useDisclosure, Container, Text } from "@chakra-ui/react";
 import Form from "./Form"
-import { Container, Text, Button } from "@chakra-ui/react";
+
 
 const Sample = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()

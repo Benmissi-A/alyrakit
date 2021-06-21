@@ -5,7 +5,6 @@ import {
   Container,
   Heading,
   Text,
-  Flex,
   Badge,
   Center,
   List,
