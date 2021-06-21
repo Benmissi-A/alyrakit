@@ -1,5 +1,7 @@
+import {Box} from "@chakra-ui/react"
+
 const Footer = () => {
-  return <footer>Built with Chakra UI</footer>
+  return <Box p={4} bg="grey.800" color="white" textAlign="center">Built with Chakra UI</Box>
 }
 
 export default Footer
