@@ -1,5 +1,6 @@
 import { useState } from "react"
 import PricingSwitch from "./PricingSwitch"
+import { Container, Text, Button, Box, Heading } from "@chakra-ui/react";
 
 const Pricing = () => {
   const config = {
@@ -23,39 +24,41 @@ const Pricing = () => {
   }
 
   return (
-    <section id="pricing">
-      <h2>Fair, simple pricing for all</h2>
+    <Box as="section" bg="grey.50" id="pricing" py="20">
+      <Container maxW="container.md">
+        <Heading textAlign="center" mb="6">Fair, simple pricing for all</Heading>
 
-      <p>
-        All types of businesses need access to development resources, so we give
-        you the option to decide how much you need to use.
-      </p>
+        <Text fontSyse="lg" textAlign="center" maxW="60ch" mb="6">
+          All types of businesses need access to development resources, so we
+          give you the option to decide how much you need to use.
+        </Text>
 
-      <PricingSwitch onChange={handleSwitchChange} />
+        <PricingSwitch onChange={handleSwitchChange} />
 
-      <div>
         <div>
-          <span>Standard</span>
-          <b>{price}</b> /mo
-          <ul>
-            {list.map((el, index) => {
-              return <li key={index}>{el}</li>
-            })}
-          </ul>
-          <button>Get it now</button>
+          <div>
+            <span>Standard</span>
+            <b>{price}</b> /mo
+            <ul>
+              {list.map((el, index) => {
+                return <li key={index}>{el}</li>;
+              })}
+            </ul>
+            <Button>Get it now</Button>
+          </div>
+          <div>
+            <span>Entreprise</span>
+            <p>
+              We offer variable pricing with discounts for larger organizations.
+              Get in touch with us and we’ll figure out something that works for
+              everyone.
+            </p>
+            <Button>Contact us</Button>
+          </div>
         </div>
-        <div>
-          <span>Entreprise</span>
-          <p>
-            We offer variable pricing with discounts for larger organizations.
-            Get in touch with us and we’ll figure out something that works for
-            everyone.
-          </p>
-          <button>Contact us</button>
-        </div>
-      </div>
-    </section>
-  )
+      </Container>
+    </Box>
+  );
 }
 
 export default Pricing
